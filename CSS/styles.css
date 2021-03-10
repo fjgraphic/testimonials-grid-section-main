@@ -10,7 +10,7 @@
 
 body {
   background-color: var(--light-grayish-blue);
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
   max-width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,8 +46,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: left;
-  -webkit-box-shadow: 0.4em 0.4em 1.5em var(--light-gray);
-          box-shadow: 0.4em 0.4em 1.5em var(--light-gray);
+  -webkit-box-shadow: 0.8em 1.6em 1.8em var(--light-gray);
+          box-shadow: 0.8em 1.6em 1.8em var(--light-gray);
 }
 
 .testimonials-container .testimonials-contianer .personal_info {
@@ -70,18 +70,18 @@ body {
 }
 
 .testimonials-container .testimonials-contianer h3 {
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: 600;
-  margin-bottom: .2em;
+  margin-bottom: 0.2em;
 }
 
 .testimonials-container .testimonials-contianer h4 {
-  font-size: .7em;
+  font-size: 0.7em;
   font-weight: 500;
 }
 
 .testimonials-container .testimonials-contianer p {
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: 500;
   margin-top: 1.2em;
   line-height: 1.5;
@@ -194,5 +194,51 @@ body {
 
 .testimonials5 .testimonials__title {
   color: var(--ery-dark-grayish-blue);
+}
+
+@media only screen and (min-width: 700px) {
+  .testimonials1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: testimonial1;
+  }
+  .testimonials2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: testimonial2;
+  }
+  .testimonials3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: testimonial3;
+  }
+  .testimonials4 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: testimonial4;
+  }
+  .testimonials5 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 4;
+    grid-area: testimonial5;
+  }
+  .testimonials-container {
+    width: 77%;
+    padding: 1.6em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+        grid-template-areas: "testimonial1 testimonial1 testimonial2 testimonial5" "testimonial3 testimonial4 testimonial4 testimonial5";
+  }
+  .testimonials1 {
+    background-position: 82% 0%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
